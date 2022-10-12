@@ -1,4 +1,5 @@
-const Job = require("../models/Job");
+const Job = require("../models/Job.js");
+const ApplyJob = require("../models/Appleidjob.js");
 
 exports.getAllJobService = async () => {
   const jobs = await Job.find({});
@@ -18,5 +19,10 @@ exports.updateJobIdByService = async (id, data) => {
 };
 exports.deleteJobIdByService = async (id) => {
   const result = await Job.deleteOne({ _id: id });
+  return result;
+};
+
+exports.createApplyJobService = async (data) => {
+  const result = await ApplyJob.create(data);
   return result;
 };

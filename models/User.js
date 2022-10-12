@@ -74,11 +74,6 @@ const userSchema = mongoose.Schema(
       type: String,
     },
 
-    imageUrl: {
-      type: String,
-      validate: [validator.isURL, "Provide a valid URL"],
-    },
-
     status: {
       type: String,
       default: "active",

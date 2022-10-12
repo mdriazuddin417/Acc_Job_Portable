@@ -1,0 +1,26 @@
+[
+    {
+        "email":"riaz100@gmail.com",
+        "password":"Riaz100#",
+        "confirmPassword":"Riaz100#",
+        "firstName":"Riaz ",
+        "LastName":" uddin",
+        "contactNumber":"01768865545",
+        "imageUrl":"https://www.riaz.com",
+        "presentAddress":"Dhaka Bangladesh",
+        "permanentAddress":"Dhaka , Bangladesh"
+
+    },
+    {
+        "email":"miaz200@gmail.com",
+        "password":"Miaz200#",
+        "confirmPassword":"Riaz200#",
+        "firstName":"Miraz ",
+        "LastName":" uddin",
+        "contactNumber":"01768865545",
+        "imageUrl":"https://www.riaz.com",
+        "presentAddress":"Brahmonbaria Bangladesh",
+        "permanentAddress":"Brahmonbaria , Bangladesh"
+
+    }
+]

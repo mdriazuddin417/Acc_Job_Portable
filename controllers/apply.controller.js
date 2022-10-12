@@ -1,13 +1,13 @@
 const {
-  getAllJobService,
-  createJobService,
-  getJobIdByService,
-  updateJobIdByService,
-} = require("../services/job.services");
+  getAllApplyJobService,
+  createApplyJobService,
+  getApplyJobIdByService,
+  updateApplyJobIdByService,
+} = require("../services/applied.services.js");
 
-exports.getAllJobs = async (req, res, next) => {
+exports.getAllApplyJobs = async (req, res, next) => {
   try {
-    const result = await getAllJobService();
+    const result = await getAllApplyJobService();
     res.status(200).json({
       data: result,
       success: true,
@@ -21,9 +21,9 @@ exports.getAllJobs = async (req, res, next) => {
     });
   }
 };
-exports.createJob = async (req, res, next) => {
+exports.createApplyJob = async (req, res, next) => {
   try {
-    const result = await createJobService(req.body);
+    const result = await createApplyJobService(req.body);
     res.status(200).json({
       success: true,
       message: "Success",
@@ -36,10 +36,10 @@ exports.createJob = async (req, res, next) => {
     });
   }
 };
-exports.getJobById = async (req, res, next) => {
+exports.getApplyJobById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const result = await getJobIdByService(id);
+    const result = await getApplyJobIdByService(id);
     res.status(200).json({
       data: result,
       success: true,
@@ -53,29 +53,12 @@ exports.getJobById = async (req, res, next) => {
     });
   }
 };
-exports.updateJobById = async (req, res, next) => {
+exports.updateApplyJobById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const result = await updateJobIdByService(id, req.body);
+    const result = await updateApplyJobIdByService(id, req.body);
     res.status(200).json({
       data: result,
-      success: true,
-      message: "Success",
-    });
-  } catch (error) {
-    res.status(400).json({
-      success: true,
-      message: "Failed",
-      error: error,
-    });
-  }
-};
-
-exports.applyJobById = async (req, res, next) => {
-  try {
-    const { id } = req.params;
-    const result = await createJobService(id, req.body);
-    res.status(200).json({
       success: true,
       message: "Success",
     });

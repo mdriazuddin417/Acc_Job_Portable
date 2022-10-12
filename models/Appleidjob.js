@@ -57,6 +57,6 @@ const appliedJobSchema = mongoose.Schema(
   { timestamps: true },
 );
 
-const AppliedJob = mongoose.model("job", appliedJobSchema);
+const AppliedJob = mongoose.model("Appleidjob", appliedJobSchema);
 
 module.exports = AppliedJob;
