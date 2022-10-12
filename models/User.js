@@ -39,6 +39,7 @@ const userSchema = mongoose.Schema(
     },
     role: {
       type: String,
+      default: "candidate",
       enum: ["candidate", "manager", "admin"],
     },
     firstName: {
@@ -66,6 +67,18 @@ const userSchema = mongoose.Schema(
       type: String,
       validate: [validator.isURL, "Provide a valid URL"],
     },
+    presentAddress: {
+      type: String,
+    },
+    permanentAddress: {
+      type: String,
+    },
+
+    imageUrl: {
+      type: String,
+      validate: [validator.isURL, "Provide a valid URL"],
+    },
+
     status: {
       type: String,
       default: "active",

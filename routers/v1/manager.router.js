@@ -1,5 +1,5 @@
 const express = require("express");
-const managerController = require("../../controllers/manager.controller");
+const managerController = require("../../controllers/manager.controller.js");
 const router = express.Router();
 
 router.route("/jobs").get(managerController.getAllJobs);
