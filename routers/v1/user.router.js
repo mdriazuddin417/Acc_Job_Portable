@@ -1,8 +1,11 @@
 const express = require("express");
-const jobController = require("../../controllers/job.controller.js");
+const userController = require("../../controllers/user.controller.js");
+const verifyToken = require("../../middleware/verifyToken.js");
 const router = express.Router();
 
-router.route("/").get(jobController.getAllJobs);
-router.route("/:id").get(jobController.getJobById);
+router.post("/signup", userController.signUp);
+router.post("/login", userController.login);
+router.get("/me", verifyToken, userController.getMe);
+router.get("/:id", userController.updateUser);
 
 module.exports = router;

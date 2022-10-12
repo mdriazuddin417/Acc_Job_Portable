@@ -8,9 +8,9 @@ exports.singUpService = async (data) => {
   const result = await User.create(data);
   return result;
 };
-exports.LoginService = async (id) => {
-  const job = await User.findOne({ _id: id });
-  return job;
+exports.findUserByEmail = async (email) => {
+  const user = await User.findOne({ email });
+  return user;
 };
 exports.updateUserService = async (id, data) => {
   const result = await User.updateOne({ _id: id }, data);
@@ -19,4 +19,8 @@ exports.updateUserService = async (id, data) => {
 exports.deleteUser = async (id) => {
   const result = await User.deleteOne({ _id: id });
   return result;
+};
+
+exports.findUserByToken = async (token) => {
+  return await User.findOne({ confirmationToken: token });
 };

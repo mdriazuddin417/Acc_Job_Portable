@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
 const { ObjectId } = mongoose.Schema.Types;
+const bcrypt = require("bcrypt");
+const crypto = require("crypto");
 
 const userSchema = mongoose.Schema(
   {
@@ -87,6 +89,29 @@ const userSchema = mongoose.Schema(
   },
   { timestamps: true },
 );
+userSchema.pre("save", function (next) {
+  const password = this.password;
+  bcrypt.genSalt(10, (err, salt) => {
+    bcrypt.hash(password, salt, (err, hash) => {
+      if (err) throw err;
+      this.password = hash;
+      this.confirmPassword = undefined;
+    });
+  });
+});
+
+userSchema.methods.comparePassword = function (password, hash) {
+  const isPasswordValid = bcrypt.compareSync(password, hash);
+  return isPasswordValid;
+};
+
+userSchema.methods.generateConfirmationToken = function () {
+  const token = crypto.randomBytes(32).toString("hex");
+  this.confirmationToken = token;
+  const date = new Date();
+  date.setDate(date.getDate() + 1);
+  this.confirmationTokenExpire = date;
+};
 
 const User = mongoose.model("User", userSchema);
 
