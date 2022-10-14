@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
-const { ObjectId } = mongoose.Schema.Types;
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
 
@@ -21,42 +20,44 @@ const userSchema = mongoose.Schema(
         validator: (value) =>
           validator.isStrongPassword(value, {
             minLength: 4,
-            minLowercase: 1,
+            minLowercase: 3,
+            minNumbers: 1,
             minUppercase: 1,
-            minNumber: 1,
             minSymbols: 1,
           }),
         message: "Password {VALUE} is not strong enough",
       },
     },
+
     confirmPassword: {
       type: String,
       required: [true, "Please confirm your password"],
       validate: {
         validator: function (value) {
-          return value == this.password;
+          return value === this.password;
         },
         message: "Password don't match",
       },
     },
+
     role: {
       type: String,
-      default: "candidate",
       enum: ["candidate", "manager", "admin"],
+      default: "candidate",
     },
     firstName: {
       type: String,
-      required: [true, "please provide a first Name"],
+      required: [true, "Please provide a first name"],
       trim: true,
-      minLength: [3, "Name must be at least 3 character"],
-      maxLength: [100, "Name is to longer"],
+      minLength: [3, "Name must be at least a first name"],
+      maxLength: [100, "Name is to large"],
     },
     lastName: {
       type: String,
-      required: [true, "please provide a Last Name"],
+      required: [true, "Please provide a Last name"],
       trim: true,
-      minLength: [3, "Name must be at least 3 character"],
-      maxLength: [100, "Name is to longer"],
+      minLength: [3, "Name must be at least a last name"],
+      maxLength: [100, "Name is to large"],
     },
     contactNumber: {
       type: String,
@@ -65,20 +66,14 @@ const userSchema = mongoose.Schema(
         "Please provide a valid contact number",
       ],
     },
-    imageUrl: {
-      type: String,
-      validate: [validator.isURL, "Provide a valid URL"],
-    },
-    presentAddress: {
-      type: String,
-    },
-    permanentAddress: {
-      type: String,
-    },
 
+    imageURL: {
+      type: String,
+      validate: [validator.isURL, "Please provide a valid url"],
+    },
     status: {
       type: String,
-      default: "active",
+      default: "inactive",
       enum: ["active", "inactive", "blocked"],
     },
     confirmationToken: String,
@@ -89,6 +84,7 @@ const userSchema = mongoose.Schema(
   },
   { timestamps: true },
 );
+
 userSchema.pre("save", function (next) {
   const password = this.password;
   bcrypt.genSalt(10, (err, salt) => {
@@ -96,12 +92,15 @@ userSchema.pre("save", function (next) {
       if (err) throw err;
       this.password = hash;
       this.confirmPassword = undefined;
+      next();
     });
   });
 });
 
 userSchema.methods.comparePassword = function (password, hash) {
+  console.log(password, hash);
   const isPasswordValid = bcrypt.compareSync(password, hash);
+  console.log(isPasswordValid);
   return isPasswordValid;
 };
 

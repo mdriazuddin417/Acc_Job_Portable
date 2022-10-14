@@ -1,4 +1,4 @@
-const User = require("../models/User.js");
+const User = require("../models/User");
 
 exports.getAllUserService = async () => {
   const users = await User.find({});

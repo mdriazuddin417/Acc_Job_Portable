@@ -7,5 +7,6 @@ router.post("/signup", userController.signUp);
 router.post("/login", userController.login);
 router.get("/me", verifyToken, userController.getMe);
 router.get("/:id", userController.updateUser);
+router.get("/", userController.getAllUser);
 
 module.exports = router;

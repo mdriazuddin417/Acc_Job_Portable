@@ -4,9 +4,6 @@ const router = express.Router();
 
 router.route("/").get(applyJobController.getAllApplyJobs);
 
-router
-  .route("/:id")
-  .get(applyJobController.getApplyJobById)
-  .patch(applyJobController.updateJobById);
+router.route("/:id").get(applyJobController.getApplyJobById);
 
 module.exports = router;

@@ -4,9 +4,8 @@ const {
   findUserByEmail,
   findUserByToken,
   updateUserService,
-} = require("../services/user.services.js");
+} = require("../services/user.services");
 
-const bcrypt = require("bcrypt");
 const { generateToken } = require("../utils/token");
 exports.getAllUser = async (req, res, next) => {
   try {
@@ -27,7 +26,7 @@ exports.getAllUser = async (req, res, next) => {
 exports.signUp = async (req, res, next) => {
   try {
     const user = await singUpService(req.body);
-
+    const token = user.generateConfirmationToken();
     await user.save({ validateBeforeSave: false });
 
     res.status(200).json({
@@ -48,7 +47,7 @@ exports.login = async (req, res, next) => {
     if (!email || !password) {
       return res.status(401).json({
         status: "failed",
-        error: "Please provide your valid details",
+        error: "Please provide your credential",
       });
     }
     const user = await findUserByEmail(email);
@@ -59,7 +58,8 @@ exports.login = async (req, res, next) => {
       });
     }
 
-    const isPasswordValid = bcrypt.compareSync(password, user.password);
+    const isPasswordValid = user.comparePassword(password, user.password);
+
     if (!isPasswordValid) {
       return res.status(401).json({
         status: "failed",
@@ -72,9 +72,8 @@ exports.login = async (req, res, next) => {
         error: "Your account is not active yet",
       });
     }
-
     const token = generateToken(user);
-    const { password: pwt, ...others } = user.toObject();
+    const { password: pwd, ...others } = user.toObject();
 
     res.status(200).json({
       status: "success",

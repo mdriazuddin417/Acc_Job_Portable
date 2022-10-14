@@ -12,6 +12,7 @@ router
 router
   .route("/:id")
   .get(jobController.getJobById)
+  .post(jobController.applyJobById)
   .patch(verifyToken, authorization("manager"), jobController.updateJobById);
 
 module.exports = router;
