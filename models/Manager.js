@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
-const { ObjectId } = mongoose.Schema.Types;
 
 const managerSchema = mongoose.Schema(
   {
@@ -22,15 +21,10 @@ const managerSchema = mongoose.Schema(
       type: String,
       validate: [validator.isMobilePhone, "Provide a valid contact number"],
     },
-    website: {
-      type: String,
-      validate: [validator.isURL, "Provide a valid URL"],
-    },
     companyName: {
       type: String,
       required: [true, "Please Provide a company name"],
     },
-    jobCount: Number,
   },
   { timestamps: true },
 );

@@ -73,7 +73,7 @@ const userSchema = mongoose.Schema(
     },
     status: {
       type: String,
-      default: "inactive",
+      default: "active",
       enum: ["active", "inactive", "blocked"],
     },
     confirmationToken: String,
@@ -85,23 +85,28 @@ const userSchema = mongoose.Schema(
   { timestamps: true },
 );
 
+// userSchema.pre("save", function (next) {
+//   const password = this.password;
+//   bcrypt.genSalt(10, (err, salt) => {
+//     bcrypt.hash(password, salt, (err, hash) => {
+//       if (err) throw err;
+//       this.password = hash;
+//       this.confirmPassword = undefined;
+//       next();
+//     });
+//   });
+// });
 userSchema.pre("save", function (next) {
-  const password = this.password;
-  bcrypt.genSalt(10, (err, salt) => {
-    bcrypt.hash(password, salt, (err, hash) => {
-      if (err) throw err;
-      this.password = hash;
-      this.confirmPassword = undefined;
-      next();
-    });
-  });
+  this.confirmPassword = undefined;
+  next();
 });
 
-userSchema.methods.comparePassword = function (password, hash) {
-  console.log(password, hash);
-  const isPasswordValid = bcrypt.compareSync(password, hash);
-  console.log(isPasswordValid);
-  return isPasswordValid;
+userSchema.methods.comparePassword = function (password, userPassword) {
+  if (password == userPassword) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 userSchema.methods.generateConfirmationToken = function () {

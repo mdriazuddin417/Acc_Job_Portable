@@ -11,6 +11,15 @@ const appliedJobSchema = mongoose.Schema(
       required: true,
       trim: true,
     },
+
+    name: {
+      type: String,
+      required: [true, "Please Provide your name"],
+    },
+    email: {
+      type: String,
+      validate: [validator.isEmail, "Provide a valid Email"],
+    },
     companyName: {
       type: String,
       required: [true, "Please Provide a company name"],
@@ -19,7 +28,7 @@ const appliedJobSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    position: {
+    jobType: {
       type: String,
       required: true,
     },
@@ -31,12 +40,15 @@ const appliedJobSchema = mongoose.Schema(
       type: Number,
       required: [true, "salary must be required"],
     },
-    jobId: {
-      type: ObjectId,
-      ref: "Job",
-      required: true,
+
+    job: {
+      id: {
+        type: ObjectId,
+        required: true,
+        ref: "Job",
+      },
     },
-    managerId: {
+    manager: {
       name: String,
       id: {
         type: ObjectId,
@@ -44,9 +56,7 @@ const appliedJobSchema = mongoose.Schema(
         ref: "Manager",
       },
     },
-    userId: {
-      name: String,
-      email: String,
+    user: {
       id: {
         type: ObjectId,
         required: true,

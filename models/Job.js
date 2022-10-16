@@ -23,7 +23,7 @@ const jobSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    position: {
+    jobType: {
       type: String,
       required: true,
     },
@@ -49,10 +49,18 @@ const jobSchema = mongoose.Schema(
       default: "paid",
       enum: ["paid", "unpaid"],
     },
+    lastDate: Date,
     appliedCount: Number,
-    managerId: {
-      type: ObjectId,
-      required: true,
+    manager: {
+      name: {
+        type: String,
+        required: true,
+      },
+      id: {
+        type: ObjectId,
+        ref: "Manager",
+        required: true,
+      },
     },
   },
   { timestamps: true },
