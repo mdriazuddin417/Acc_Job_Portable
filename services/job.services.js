@@ -19,7 +19,6 @@ exports.createJobService = async (data) => {
 };
 exports.getJobIdByService = async (id) => {
   const job = await Job.findOne({ _id: id }).populate("manager.id");
-
   return job;
 };
 exports.updateJobIdByService = async (id, data) => {

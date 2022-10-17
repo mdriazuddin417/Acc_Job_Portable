@@ -7,14 +7,6 @@
         
         "companyName":"Programming hero"
        
-    },
-    {
-        "name":"Md Miraz Ali",
-        "description":"Hello, My name is Riaz . I am Manager in Programming hero company",
-        "email":"riaz@gmail.com",
-        "phone":"0178655264",
-        "website":"http://www.riaz.com",
-        "companyName":"Knoct",
-        "jobCount":0
     }
+    
 ]

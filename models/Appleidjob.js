@@ -56,11 +56,13 @@ const appliedJobSchema = mongoose.Schema(
         ref: "Manager",
       },
     },
-    user: {
+    candidate: {
+      name: String,
+      email: String,
       id: {
         type: ObjectId,
         required: true,
-        ref: "User",
+        ref: "Candidate",
       },
     },
   },

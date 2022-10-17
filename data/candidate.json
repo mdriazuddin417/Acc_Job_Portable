@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Md Riaz Udddin",
+        "email": "riaz@gmail.com",
+        "contactNumber": "01768865545",
+        "imageUrl": "https://www.riaz.com",
+        "resumeLink": "https://www.riaz.com",
+        "presentAddress": "Dhaka Bangladesh",
+        "permanentAddress": "Dhaka , Bangladesh",
+        "user": {
+            "id": "63492c919c12e57952c1aefa"
+        },
+        "job": {
+            "id": "634a127caccd464e7f46701e"
+        }
+    },
+    {
+        "name": "Miraz Ali",
+        "email": "miraz@gmail.com",
+        "contactNumber": "01768865545",
+        "imageUrl": "https://www.miraz.com",
+        "resumeLink": "https://www.miraz.com",
+        "presentAddress": "Dhaka Bangladesh",
+        "permanentAddress": "Dhaka , Bangladesh",
+        "user": {
+            "id": "23465154"
+        },
+        "job": {
+            "id": "634a127caccd464e7f46701f"
+        }
+    },
+    {
+        "name": "Siraj Ali",
+        "email": "siraj@gmail.com",
+        "contactNumber": "01768865545",
+        "imageUrl": "https://www.siraj.com",
+        "resumeLink": "https://www.siraj.com",
+        "presentAddress": "Dhaka Bangladesh",
+        "permanentAddress": "Dhaka , Bangladesh",
+        "user": {
+            "id": "23465154"
+        },
+        "job": {
+            "id": "634a127caccd464e7f467020"
+        }
+    },
+    {
+        "name": "Miso Sarkar",
+        "email": "miso@gmail.com",
+        "contactNumber": "01768865545",
+        "imageUrl": "https://www.miso.com",
+        "resumeLink": "https://www.miso.com",
+        "presentAddress": "Dhaka Bangladesh",
+        "permanentAddress": "Dhaka , Bangladesh",
+        "user": {
+            "id": "23465154"
+        },
+        "job": {
+            "id": "634a127caccd464e7f467021"
+        }
+    },
+    {
+        "name": "Salman Sarkar",
+        "email": "salman@gmail.com",
+        "contactNumber": "01768865545",
+        "imageUrl": "https://www.salman.com",
+        "resumeLink": "https://www.salman.com",
+        "presentAddress": "Dhaka Bangladesh",
+        "permanentAddress": "Dhaka , Bangladesh",
+        "user": {
+            "id": "23465154"
+        },
+        "job": {
+            "id": "23465154"
+        }
+    },
+    {
+        "name": "Masom Sarkar",
+        "email": "masom@gmail.com",
+        "contactNumber": "01768865545",
+        "imageUrl": "https://www.Masom.com",
+        "resumeLink": "https://www.Masom.com",
+        "presentAddress": "Dhaka Bangladesh",
+        "permanentAddress": "Dhaka , Bangladesh",
+        "user": {
+            "id": "23465154"
+        },
+        "job": {
+            "id": "23465154"
+        }
+    }
+]

@@ -6,6 +6,9 @@ exports.getAllApplyJobService = async () => {
 };
 
 exports.getApplyJobIdByService = async (id) => {
-  const job = await Appleidjob.findOne({ _id: id });
+  const job = await Appleidjob.findOne({ _id: id })
+    .populate("manager.id")
+    .populate("candidate.id")
+    .populate("job.id");
   return job;
 };
