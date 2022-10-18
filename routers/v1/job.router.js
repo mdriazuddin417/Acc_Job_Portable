@@ -8,14 +8,18 @@ const router = express.Router();
 router.route("/top-paid").get(jobController.getMostPaidJob);
 router.route("/top-apply").get(jobController.getMostApplyJob);
 
-router.route("/").get(jobController.getAllJobs).post(jobController.createJob);
-// .post(authorization("manager"), jobController.createJob);
+router.post("/file-upload", uploader.array("pdf"), jobController.fileUpload);
+
+router
+  .route("/")
+  .get(jobController.getAllJobs)
+  .post(verifyToken, authorization("manager"), jobController.createJob);
 
 router
   .route("/:id")
   .get(jobController.getJobById)
-  .patch(jobController.updateJobById);
-// .patch(authorization("manager"), jobController.updateJobById);
-router.route("/:id/apply").post(jobController.createApplyJobById);
+  .patch(verifyToken, authorization("manager"), jobController.updateJobById);
+
+router.route("/:id/apply").post(verifyToken, jobController.createApplyJobById);
 
 module.exports = router;

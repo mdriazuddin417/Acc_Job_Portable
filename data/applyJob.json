@@ -1,23 +1,21 @@
 {
     "title": "Frontend Developer",
-    "description": "This is job for people in web development site for in other country and my county",
+  
     "companyName": "Programming hero",
+    "name":"Miraz Ali",
+    "email":"miraz@gmail.com",
     "location": "dhaka",
     "jobType": "frontend",
-    "salary": 7000,
-    "eduction": "University of Honourse complete",
-    "experience": "3 years expreience in React development site",
     "resumeLink": "http://www.riaz.com",
     "manager": {
         "name": "Md Riaz Uddin",
-        "id": "634a0bff3b080146a0eb22d7"
+        "id": "634cd69c42bc1d9c795617b1"
     },
     "job": {
-        "id": "634a0bff3b080146a0eb22d7"
+        "id": "634cd71e59340278df8df7a1"
     },
     "candidate": {
-        "name": " Miraz Uddin",
-        "email": "manna200@gmail.com",
-        "id": "63492c919c12e57952c1aefa"
+       
+        "id": "634cdbf16410baf26c9e178e"
     }
 }

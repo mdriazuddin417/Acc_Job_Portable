@@ -10,7 +10,8 @@ exports.getManagerService = async () => {
   return result;
 };
 exports.getApplyJobByIdService = async (id) => {
-  const result = await ApplyJob.findOne({ _id: id });
+  const result = await ApplyJob.findOne({ _id: id }).populate("candidate.id");
+
   return result;
 };
 exports.createManagerService = async (data) => {

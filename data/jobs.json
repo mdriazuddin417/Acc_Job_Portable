@@ -1,94 +1,119 @@
 [
     {
-        "title":"Frontend Developer",
-        "description":"This is job for people in web development site for in other country and my county",
-        "companyName":"Programming hero",
-        "location":"dhaka",
-        "jobType":"frontend",
-        "salary":7000,
-        "lastDate":"2022-10-18",
-        "eduction":"University of Honourse complete",
-        "experience":"3 years expreience in React development site",
-        "appliedCount":0,
-        "manager":{"name":"Md Riaz Uddin","id":"634a0bff3b080146a0eb22d7"}
-},
+        "title": "Junior Frontend Developer",
+        "description": "This is job for people in web development site for in other country and my county",
+        "companyName": "Programming hero",
+        "location": "dhaka",
+        "jobType": "frontend",
+        "salary": 7000,
+        "role": "unpaid",
+        "lastDate": "2022-10-18",
+        "eduction": "University of Honourse complete",
+        "experience": "3 years expreience in React development site",
+        "appliedCount": 0,
+        "manager": {
+            "name": "Md Riaz Uddin",
+            "id": "634cd69c42bc1d9c795617b1"
+        }
+    },
     {
-        "title":"Backend Developer",
-        "description":"This is job for people in web development site for in other country and my county",
-        "companyName":"Programming hero",
-        "location":"chitagong",
-        "jobType":"backend",
-        "salary":6000,
-        "lastDate":"2022-10-18",
-        "eduction":"University of Honourse complete",
-        "experience":"3 years expreience in React development site", 
-        "appliedCount":0,
-          "manager":{"name":"Md Riaz Uddin","id":"634a0bff3b080146a0eb22d7"}
-},
+        "title": "Junior Backend Developer",
+        "description": "This is job for people in web development site for in other country and my county",
+        "companyName": "Programming hero",
+        "location": "chitagong",
+        "jobType": "backend",
+        "salary": 6000,
+        "role": "unpaid",
+        "lastDate": "2022-10-18",
+        "eduction": "University of Honourse complete",
+        "experience": "3 years expreience in React development site",
+        "appliedCount": 0,
+        "manager": {
+            "name": "Md Riaz Uddin",
+            "id": "634cd69c42bc1d9c795617b1"
+        }
+    },
     {
-        "title":"Graphic Designer",
-        "description":"This is job for people in web development site for in other country and my county",
-        "companyName":"Programming hero",
-        "location":"chitagong",
-        "jobType":"graphic",
-        "salary":5000,
-        "lastDate":"2022-10-18",
-        "eduction":"University of Honourse complete",
-        "experience":"3 years expreience in React development site", 
-        "appliedCount":0,
-          "manager":{"name":"Md Riaz Uddin","id":"634a0bff3b080146a0eb22d7"}
-},
+        "title": "Junior Graphic Designer",
+        "description": "This is job for people in web development site for in other country and my county",
+        "companyName": "Programming hero",
+        "location": "chitagong",
+        "jobType": "graphic",
+        "salary": 5000,
+        "lastDate": "2022-10-18",
+        "eduction": "University of Honourse complete",
+        "experience": "3 years expreience in React development site",
+        "appliedCount": 0,
+        "manager": {
+            "name": "Md Riaz Uddin",
+            "id": "634cd69c42bc1d9c795617b1"
+        }
+    },
     {
-        "title":"Data Structure",
-        "description":"This is job for people in web development site for in other country and my county",
-        "companyName":"Programming hero",
-        "location":"chitagong",
-        "jobType":"datastructure",
-        "salary":4000,
-        "lastDate":"2022-10-18",
-        "eduction":"University of Honourse complete",
-        "experience":"3 years expreience in React development site", 
-        "appliedCount":0,
-          "manager":{"name":"Md Riaz Uddin","id":"634a0bff3b080146a0eb22d7"}
-},
+        "title": "Junior Data Structure",
+        "description": "This is job for people in web development site for in other country and my county",
+        "companyName": "Programming hero",
+        "location": "chitagong",
+        "jobType": "datastructure",
+        "salary": 4000,
+        "lastDate": "2022-10-18",
+        "eduction": "University of Honourse complete",
+        "experience": "3 years expreience in React development site",
+        "appliedCount": 0,
+        "manager": {
+            "name": "Md Riaz Uddin",
+            "id": "634cd69c42bc1d9c795617b1"
+        }
+    },
     {
-        "title":"Algorithm",
-        "description":"This is job for people in web development site for in other country and my county",
-        "companyName":"Programming hero",
-        "location":"dhaka",
-        "jobType":"Algorithm",
-        "salary":3000,
-        "lastDate":"2022-10-18",
-        "eduction":"University of Honourse complete",
-        "experience":"3 years expreience in React development site", 
-        "appliedCount":0,
-          "manager":{"name":"Md Riaz Uddin","id":"634a0bff3b080146a0eb22d7"}
-},
+        "title": "Junior Algorithm",
+        "description": "This is job for people in web development site for in other country and my county",
+        "companyName": "Programming hero",
+        "location": "dhaka",
+        "jobType": "Algorithm",
+        "salary": 3000,
+        "role": "unpaid",
+        "lastDate": "2022-10-18",
+        "eduction": "University of Honourse complete",
+        "experience": "3 years expreience in React development site",
+        "appliedCount": 0,
+        "manager": {
+            "name": "Md Riaz Uddin",
+            "id": "634cd69c42bc1d9c795617b1"
+        }
+    },
     {
-        "title":"Email Marketing",
-        "description":"This is job for people in web development site for in other country and my county",
-        "companyName":"Programming hero",
-        "location":"chitagong",
-        "jobType":"marketing",
-        "salary":2000,
-        "lastDate":"2022-10-18",
-        "eduction":"University of Honourse complete",
-        "experience":"3 years expreience in React development site", 
-        "appliedCount":0,
-          "manager":{"name":"Md Riaz Uddin","id":"634a0bff3b080146a0eb22d7"}
-},
+        "title": "Junior Email Marketing",
+        "description": "This is job for people in web development site for in other country and my county",
+        "companyName": "Programming hero",
+        "location": "chitagong",
+        "jobType": "marketing",
+        "salary": 2000,
+        "role": "unpaid",
+        "lastDate": "2022-10-18",
+        "eduction": "University of Honourse complete",
+        "experience": "3 years expreience in React development site",
+        "appliedCount": 0,
+        "manager": {
+            "name": "Md Riaz Uddin",
+            "id": "634cd69c42bc1d9c795617b1"
+        }
+    },
     {
-        "title":"Lead Generation",
-        "description":"This is job for people in web development site for in other country and my county",
-        "companyName":"Programming hero",
-        "location":"chitagong",
-        "jobType":"leadGeneration",
-        "salary":1000,
-        "lastDate":"2022-10-16",
-        "eduction":"University of Honourse complete",
-        "experience":"3 years expreience in React development site", 
-        "appliedCount":0,
-          "manager":{"name":"Md Riaz Uddin","id":"634a0bff3b080146a0eb22d7"}
-}
-
+        "title": "Junior Lead Generation",
+        "description": "This is job for people in web development site for in other country and my county",
+        "companyName": "Programming hero",
+        "location": "chitagong",
+        "jobType": "leadGeneration",
+        "salary": 1000,
+        "role": "unpaid",
+        "lastDate": "2022-10-16",
+        "eduction": "University of Honourse complete",
+        "experience": "3 years expreience in React development site",
+        "appliedCount": 0,
+        "manager": {
+            "name": "Md Riaz Uddin",
+            "id": "634cd69c42bc1d9c795617b1"
+        }
+    }
 ]

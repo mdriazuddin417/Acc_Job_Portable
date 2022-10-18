@@ -1,20 +1,5 @@
 [
     {
-        "name": "Md Riaz Udddin",
-        "email": "riaz@gmail.com",
-        "contactNumber": "01768865545",
-        "imageUrl": "https://www.riaz.com",
-        "resumeLink": "https://www.riaz.com",
-        "presentAddress": "Dhaka Bangladesh",
-        "permanentAddress": "Dhaka , Bangladesh",
-        "user": {
-            "id": "63492c919c12e57952c1aefa"
-        },
-        "job": {
-            "id": "634a127caccd464e7f46701e"
-        }
-    },
-    {
         "name": "Miraz Ali",
         "email": "miraz@gmail.com",
         "contactNumber": "01768865545",
@@ -23,27 +8,10 @@
         "presentAddress": "Dhaka Bangladesh",
         "permanentAddress": "Dhaka , Bangladesh",
         "user": {
-            "id": "23465154"
-        },
-        "job": {
-            "id": "634a127caccd464e7f46701f"
+            "id": "634cd188cc41178a9fd53a75"
         }
     },
-    {
-        "name": "Siraj Ali",
-        "email": "siraj@gmail.com",
-        "contactNumber": "01768865545",
-        "imageUrl": "https://www.siraj.com",
-        "resumeLink": "https://www.siraj.com",
-        "presentAddress": "Dhaka Bangladesh",
-        "permanentAddress": "Dhaka , Bangladesh",
-        "user": {
-            "id": "23465154"
-        },
-        "job": {
-            "id": "634a127caccd464e7f467020"
-        }
-    },
+    
     {
         "name": "Miso Sarkar",
         "email": "miso@gmail.com",
@@ -53,10 +21,7 @@
         "presentAddress": "Dhaka Bangladesh",
         "permanentAddress": "Dhaka , Bangladesh",
         "user": {
-            "id": "23465154"
-        },
-        "job": {
-            "id": "634a127caccd464e7f467021"
+            "id": "634cd1b2cc41178a9fd53a78"
         }
     },
     {
@@ -68,10 +33,7 @@
         "presentAddress": "Dhaka Bangladesh",
         "permanentAddress": "Dhaka , Bangladesh",
         "user": {
-            "id": "23465154"
-        },
-        "job": {
-            "id": "23465154"
+            "id": "634cd1d0cc41178a9fd53a7b"
         }
     },
     {
@@ -83,10 +45,9 @@
         "presentAddress": "Dhaka Bangladesh",
         "permanentAddress": "Dhaka , Bangladesh",
         "user": {
-            "id": "23465154"
-        },
-        "job": {
-            "id": "23465154"
+            "id": "634cd1eccc41178a9fd53a7e"
         }
+       
     }
+  
 ]

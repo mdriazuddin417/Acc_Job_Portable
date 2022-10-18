@@ -5,9 +5,7 @@ exports.getAllCandidateService = async () => {
   return result;
 };
 exports.getCandidateByIdService = async (id) => {
-  const result = await Candidate.findOne({ _id: id })
-    .populate("user.id")
-    .populate("job.id");
+  const result = await Candidate.findOne({ _id: id }).populate("user.id");
 
   return result;
 };

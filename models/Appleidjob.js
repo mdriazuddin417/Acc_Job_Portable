@@ -36,10 +36,6 @@ const appliedJobSchema = mongoose.Schema(
       type: String,
       validate: [validator.isURL, "Provide a Resume Link"],
     },
-    salary: {
-      type: Number,
-      required: [true, "salary must be required"],
-    },
 
     job: {
       id: {
@@ -57,8 +53,6 @@ const appliedJobSchema = mongoose.Schema(
       },
     },
     candidate: {
-      name: String,
-      email: String,
       id: {
         type: ObjectId,
         required: true,

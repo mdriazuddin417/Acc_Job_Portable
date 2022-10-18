@@ -1,5 +1,6 @@
 const Job = require("../models/Job.js");
 const ApplyJob = require("../models/Appleidjob.js");
+const ObjectId = require("mongoose").Types.ObjectId;
 
 exports.getAllJobService = async (filters, quires) => {
   const jobs = await Job.find(filters)
@@ -33,22 +34,21 @@ exports.deleteJobIdByService = async (id) => {
 };
 
 exports.createApplyJobService = async (data, id) => {
-  const email = data.email;
-  const findOldApply = await ApplyJob.findOne({ email });
+  const job = await Job.findOne({ _id: id });
 
-  if (!findOldApply) {
-    const job = await Job.findOne({ _id: id });
-    const deadline = job.lastDate;
-    const currentDate = new Date();
+  const deadline = job.lastDate;
+  const currentDate = new Date();
 
-    if (deadline > currentDate) {
-      const result = await ApplyJob.create(data);
-      const increaseCount = await Job.updateOne(
-        { _id: id },
-        { $inc: { appliedCount: 1 } },
-      );
-      return result;
-    }
+  if (deadline >= currentDate) {
+    const result = await ApplyJob.create(data);
+
+    const increaseCount = await Job.updateOne(
+      { _id: id },
+      { $inc: { appliedCount: 1 } },
+    );
+    return result;
+  } else {
+    return false;
   }
 };
 

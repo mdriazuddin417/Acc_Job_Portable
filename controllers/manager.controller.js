@@ -15,7 +15,7 @@ exports.getApplyJobs = async (req, res, next) => {
     });
   } catch (error) {
     res.status(400).json({
-      success: true,
+      success: false,
       message: "Failed",
       error: error,
     });
@@ -30,7 +30,7 @@ exports.createManager = async (req, res, next) => {
     });
   } catch (error) {
     res.status(400).json({
-      success: true,
+      success: false,
       message: "Failed",
       error: error,
     });
@@ -47,7 +47,7 @@ exports.getApplyJobById = async (req, res, next) => {
     });
   } catch (error) {
     res.status(400).json({
-      success: true,
+      success: false,
       message: "Failed",
       error: error,
     });
@@ -63,7 +63,7 @@ exports.getManager = async (req, res, next) => {
     });
   } catch (error) {
     res.status(400).json({
-      success: true,
+      success: false,
       message: "Failed",
       error: error,
     });

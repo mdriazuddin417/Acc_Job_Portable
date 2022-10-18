@@ -42,13 +42,6 @@ const candidateSchema = mongoose.Schema(
         required: true,
       },
     },
-    job: {
-      id: {
-        type: ObjectId,
-        ref: "Job",
-        required: true,
-      },
-    },
   },
   { timestamps: true },
 );

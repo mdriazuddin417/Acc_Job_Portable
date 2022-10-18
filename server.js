@@ -4,7 +4,7 @@ const app = require("./app");
 const port = process.env.PORT || 8081;
 
 mongoose
-  .connect(process.env.MONGOOSE_LOCAL_DATABASE)
+  .connect(process.env.MONGODB_DATABASE)
   .then(() => console.log("Mongoose database connected successfully"))
   .catch((error) => console.log("Mongoose database not connected"));
 
